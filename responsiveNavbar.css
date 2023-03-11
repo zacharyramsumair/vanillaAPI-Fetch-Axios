@@ -1,0 +1,116 @@
+:root{
+    --navlinkColor : #000
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.responsiveNav{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between  ;
+    height: 3em;
+    background-color:#50ffaf;
+    padding: 1em;
+    position: relative;
+    color: var(--navlinkColor);
+    
+
+}
+
+.navStuff{
+    width: 30%;
+}
+
+
+.logo{
+    width: 35%;
+    font-size: 1.2em;
+
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    /* width: 50%; */
+    /* max-width: 60%; */
+    font-size: 1.2rem;
+    
+
+
+
+}
+
+.navItems{
+    list-style: none;
+    color: var(--navlinkColor);
+
+}
+
+.navItems > a{
+    text-decoration: none;
+
+}
+
+
+
+.hamburger{
+    display: none;
+    width: 3.5em;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 650px) {
+   
+
+
+    .hamburger{
+        display: block;
+    }
+
+
+    .logo{
+        font-size: 1.3rem;
+    }
+
+    .navStuff{
+        width: auto;
+    }
+
+    .links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0em;
+        /* bottom: -6.5em; */
+        top: 3.5em;
+        font-size: 1.2rem;
+    }
+
+    .links > .navItems{
+        padding: 0.5em 1em;
+        /* width: 100%; */
+        width: 100vw;
+        margin: 0;
+    }
+
+    .links > .navItems:nth-child(even){
+        background-color: rgb(171, 151, 151);
+
+    }
+
+    .links > .navItems:nth-child(odd){
+        background-color: rgb(204, 212, 204);
+
+    }
+
+  }
